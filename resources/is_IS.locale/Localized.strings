@@ -1,0 +1,5 @@
+#Sun Oct 27 14:48:48 GMT 2002
+help_text=If the blank page icon appears you have to save changes with the save button, else changes are saved in the editor window ( when the open icon appears)
+save=Save
+iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers.name=QuestionsAndAnswers
+help_title=Q & A

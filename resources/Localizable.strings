@@ -1,0 +1,19 @@
+#Tue Sep 09 17:03:07 CEST 2003
+button_create_answer=Create answer
+button_create_question=Create question
+button_down=Move down
+button_edit_answer=Edit answer
+button_edit_question=Edit question
+button_invalidate=Remove from list
+button_remove=
+button_save_created=Save created content
+button_up=Move up
+button_validate=Validate  selected
+deted_questions=Deleted questions
+help_text=
+help_title=
+iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers.name=
+no_category=
+save=
+school_choice.prelim_mesg_body1=
+update=

@@ -1,0 +1,19 @@
+#Tue Sep 09 17:03:07 CEST 2003
+button_create_answer=Skapa svar
+button_create_question=Skapa fr\u00E5ga
+button_down=Flytta ner
+button_edit_answer=Redigera svar
+button_edit_question=Redigera fr\u00E5ga
+button_invalidate=Remove from list
+button_remove=Remove from list
+button_save_created=Spara skapade fr\u00E5gor/svar
+button_up=Flytta upp
+button_validate=Bekr\u00E4fta vald post
+deted_questions=Raderade fr\u00E5gor
+help_text=Om ikonen f\u00F6r tom sida kommer fram, skall du spara svaren med Spara-knappen, annars sparas \u00E4ndringarna i redigeringsf\u00F6nstret \r\n( n\u00E4r ikonen f\u00F6r \u00D6ppna framtr\u00E4der) 
+help_title=Fr\u00E5gor & Svar
+iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers.name=Fr\u00E5gorOchSvar
+no_category=Var v\u00E4nlig skapa en kategori
+save=Spara
+school_choice.prelim_mesg_body1=
+update=Uppdatera
