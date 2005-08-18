@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project>
+<project xmlns:j="jelly:core" >
   <extend>${base.project.dir}/block-dependencies.xml</extend>
   <pomVersion>3</pomVersion>
   <name>idegaWeb Questions Block</name>
@@ -37,6 +37,13 @@
       <organization>idega software</organization>
       <roles/>
     </developer>
+    <developer>
+      <name>Dainis Brjuhoveckis</name>
+      <id>dainis</id>
+      <email>dainis.brjuhoveckis@idega.lv</email>
+      <organization>idega baltic</organization>
+      <roles/>
+    </developer>    
   </developers>
   <dependencies>
     <dependency>
@@ -48,7 +55,9 @@
       <type>jar</type>
       <url>http://www.idega.com/</url>
       <properties>
-        <eclipse.dependency>true</eclipse.dependency>
+        <j:if test="${idegaweb.project.source.dependent}=='true'}">
+          <eclipse.dependency>true</eclipse.dependency>
+        </j:if> -->
       </properties>
     </dependency>
     <dependency>
@@ -60,7 +69,9 @@
       <type>jar</type>
       <url>http://www.idega.com/</url>
       <properties>
-        <eclipse.dependency>true</eclipse.dependency>
+        <j:if test="${idegaweb.project.source.dependent}=='true'}">
+          <eclipse.dependency>true</eclipse.dependency>
+        </j:if> -->
       </properties>
     </dependency>
     <dependency>
@@ -72,7 +83,9 @@
       <type>jar</type>
       <url>http://www.idega.com/</url>
       <properties>
-        <eclipse.dependency>true</eclipse.dependency>
+        <j:if test="${idegaweb.project.source.dependent}=='true'}">
+          <eclipse.dependency>true</eclipse.dependency>
+        </j:if> -->
       </properties>
     </dependency>
   </dependencies>
