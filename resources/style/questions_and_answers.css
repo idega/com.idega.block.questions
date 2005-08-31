@@ -1,0 +1,134 @@
+/*
+Style sheet for block Questions and Answers 2
+
+If there is a need to change how this block looks, 
+these style definitions must be overridden
+*/
+.questions_and_answers {
+	width: auto; 
+	margin: .5em;
+}
+
+
+/* style definitions for administration of categories part */
+.questions_and_answers .category_admin {   
+    width: auto; 
+}
+
+.questions_and_answers .category_admin .category_management { 
+    margin-top: 2px;
+    display: block; 
+    float: left;    
+}
+.questions_and_answers .category_admin .category_help {
+    display: block;   
+    float: right;    
+}
+.questions_and_answers .category_admin .clearer {
+    clear: both;
+}
+
+
+/* style definitions for administration of questions part */
+.questions_and_answers .questions_admin {
+    width: auto;
+}
+.questions_and_answers .questions_admin p.info{
+    margin: .5em 0em .5em 0em;
+    width: auto;
+}
+.questions_and_answers .questions_admin .category {}
+.questions_and_answers .questions_admin .new_and_deleted_questions{
+    margin-left: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+.questions_and_answers .questions_admin .new_and_deleted_questions form{    
+    margin: 0;    
+}
+
+.questions_and_answers .questions_admin .new_and_deleted_questions .new{
+    margin-top: 1px;
+    margin-right: 2em;
+    display: block;
+    float: left;
+}
+.questions_and_answers .questions_admin .new_and_deleted_questions .deleted_questions{
+    display: block;
+    float: left;
+}
+.questions_and_answers .questions_admin .new_and_deleted_questions .validate{
+    margin-top: 2px;
+    display: block;
+    float: left;    
+    width: auto;
+}
+.questions_and_answers .questions_admin .new_and_deleted_questions  .clearer {
+    clear: both; padding: 0; margin: 0;
+}
+
+.questions_and_answers .questions_admin .item{
+    margin-left: 2em;
+    margin-top: 0.5em;    
+}
+.questions_and_answers .questions_admin .item p{
+    margin: 0; 
+}
+.questions_and_answers .questions_admin .item p.number{
+    float: left;
+    width: 2em;
+    text-align: right;
+}
+.questions_and_answers .questions_admin .item p.title{
+    float: left;
+}
+.questions_and_answers .questions_admin .item p.question_form{
+    float: left;
+    width: auto;
+    margin-left: 0.5em;
+}
+.questions_and_answers .questions_admin .item p.question_form a{
+    margin-right: 3px;
+}
+.questions_and_answers .questions_admin .item p.question_form a.edit{
+    margin-right: 17px;
+}
+.questions_and_answers .questions_admin .item p.question_form a.delete{
+    margin-right: 12px;
+}
+.questions_and_answers .questions_admin .item p.clearer{
+    clear: both;
+}
+
+
+/* style definitions for list of questions and answers part */
+.questions_and_answers .questions_list {}
+.questions_and_answers .questions_list .category{
+}
+.questions_and_answers .questions_list .item{
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+    
+}
+.questions_and_answers .questions_list .item p{margin: 0;}
+.questions_and_answers .questions_list .item .question{
+}
+.questions_and_answers .questions_list .item .question .prefix{
+    width: 3em; float: left;    
+}
+.questions_and_answers .questions_list .item .question .title {}
+.questions_and_answers .questions_list .item .question .body  {
+    margin-left: 3em;
+}
+
+
+.questions_and_answers .questions_list .item .answer{
+}
+.questions_and_answers .questions_list .item .answer .prefix{
+    width: 3em; float: left;    
+}
+.questions_and_answers .questions_list .item .answer .title {}
+.questions_and_answers .questions_list .item .answer .body  {
+    margin-left: 3em;
+}
+.questions_and_answers .questions_list .item a.home {}
