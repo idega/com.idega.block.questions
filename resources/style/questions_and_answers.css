@@ -26,6 +26,7 @@ these style definitions must be overridden
 }
 .questions_and_answers .category_admin .clearer {
     clear: both;
+    width: 1px; height: 1px;    
 }
 
 
@@ -37,7 +38,9 @@ these style definitions must be overridden
     margin: .5em 0em .5em 0em;
     width: auto;
 }
-.questions_and_answers .questions_admin .category {}
+.questions_and_answers .questions_admin .category {
+    clear: both;
+}
 .questions_and_answers .questions_admin .new_and_deleted_questions{
     margin-left: 2em;
     margin-top: 1.5em;
@@ -65,11 +68,12 @@ these style definitions must be overridden
 }
 .questions_and_answers .questions_admin .new_and_deleted_questions  .clearer {
     clear: both; padding: 0; margin: 0;
+    width: 1px; height: 1px;
 }
 
 .questions_and_answers .questions_admin .item{
     margin-left: 2em;
-    margin-top: 0.5em;    
+    margin-top: .5em;    
 }
 .questions_and_answers .questions_admin .item p{
     margin: 0; 
@@ -98,19 +102,24 @@ these style definitions must be overridden
 }
 .questions_and_answers .questions_admin .item p.clearer{
     clear: both;
+    width: 1px; height: 1px;
 }
 
 
 /* style definitions for list of questions and answers part */
-.questions_and_answers .questions_list {}
+.questions_and_answers .questions_list {
+    margin-top: 2em;
+}
 .questions_and_answers .questions_list .category{
 }
 .questions_and_answers .questions_list .item{
     margin-bottom: 1.5em;
     margin-left: 1em;
-    
+    margin-top: .5em;    
 }
-.questions_and_answers .questions_list .item p{margin: 0;}
+.questions_and_answers .questions_list .item p{
+    margin: 0;
+}
 .questions_and_answers .questions_list .item .question{
 }
 .questions_and_answers .questions_list .item .question .prefix{
