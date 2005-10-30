@@ -1,4 +1,3 @@
-#Fri Oct 24 12:54:49 CEST 2003
 button_create_answer=Create answer
 button_create_question=Create question
 button_down=Move down
@@ -13,6 +12,7 @@ deleted_questions=Deleted questions
 help_text=
 help_title=
 iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers.name=
+iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers2.name=QuestionsAndAnswers2
 no_category=
 save=
 school_choice.prelim_mesg_body1=
