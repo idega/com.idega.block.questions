@@ -16,6 +16,7 @@ import com.idega.block.questions.data.Question;
 import com.idega.block.text.business.ContentHelper;
 import com.idega.block.text.business.TextFinder;
 import com.idega.business.IBOLookup;
+import com.idega.core.builder.data.ICPage;
 import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
 import com.idega.presentation.IWContext;
@@ -92,6 +93,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	private final static String DEFAULT_MAIN_STYLE_CLASS = "questions_and_answers";
 	private String mainStyleClass = DEFAULT_MAIN_STYLE_CLASS;
 	
+	private ICPage iViewerPage;
 	
 	public QuestionsAndAnswers2(){
 		setAutoCreate(false);
@@ -557,6 +559,10 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
         titleP.setStyleClass("title"); 
         if (showAll) {
             AnchorLink l = new AnchorLink(new Text(qHeadline), "q" + question.getPrimaryKey());
+            if (iViewerPage != null) {
+            	l.setPage(iViewerPage);
+            	l.addCurrentURLToLink(true);
+            }
             titleP.getChildren().add(l);
         } else {
             titleP.getChildren().add(new Text(qHeadline));
@@ -909,5 +915,10 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 
         return item;
     }
+
+		
+		public void setViewerPage(ICPage viewerPage) {
+			iViewerPage = viewerPage;
+		}
     
 }
