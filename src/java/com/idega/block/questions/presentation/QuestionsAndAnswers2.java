@@ -94,6 +94,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	private String mainStyleClass = DEFAULT_MAIN_STYLE_CLASS;
 	
 	private ICPage iViewerPage;
+	private boolean hideFromOthers = false;
 	
 	public QuestionsAndAnswers2(){
 		setAutoCreate(false);
@@ -144,8 +145,10 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 			
             if (isAdmin) {
                 mainLayer.getChildren().add(getCategoryAdminPart(iwc));	 //admin part to manage categories
-                mainLayer.getChildren().add(getQuestionsAdminPart(iwc)); //admin part for questions            
-            }            
+            }
+            if (!hideFromOthers || (hideFromOthers && isAdmin)) {
+	            mainLayer.getChildren().add(getQuestionsAdminPart(iwc)); //admin part for questions            
+            }
             if (showAll && (showAllCategories || (!showAllCategories && valViewCategory != null))) {
                 mainLayer.getChildren().add(getQuestionsListPart(iwc));  //list of questions and their answers
             }
@@ -919,6 +922,11 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 		
 		public void setViewerPage(ICPage viewerPage) {
 			iViewerPage = viewerPage;
+		}
+
+		
+		public void setHideFromOthers(boolean hideFromOthers) {
+			this.hideFromOthers = hideFromOthers;
 		}
     
 }
