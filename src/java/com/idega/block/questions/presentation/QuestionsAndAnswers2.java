@@ -89,6 +89,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	
 	private int layout = QAndALayoutHandler.DEFAULT_LAYOUT;
 	
+	public final static String CACHE_KEY = "qa_questions_and_answers2";
 	
 	private final static String DEFAULT_MAIN_STYLE_CLASS = "questions_and_answers";
 	private String mainStyleClass = DEFAULT_MAIN_STYLE_CLASS;
@@ -97,7 +98,16 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	private boolean hideFromOthers = false;
 	
 	public QuestionsAndAnswers2(){
+		setCacheable(getCacheKey(), (20 * 60 * 1000));
 		setAutoCreate(false);
+	}
+	
+	public String getCacheKey() {
+		return CACHE_KEY;
+	}
+
+	protected boolean isCacheable(IWContext iwc) {
+		return !iwc.hasEditPermission(this);
 	}
 	
 	public String getBundleIdentifier(){
