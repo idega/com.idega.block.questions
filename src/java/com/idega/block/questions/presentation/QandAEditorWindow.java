@@ -19,7 +19,6 @@ import com.idega.core.localisation.business.ICLocaleBusiness;
 import com.idega.core.localisation.presentation.ICLocalePresentation;
 import com.idega.data.IDOLookup;
 import com.idega.idegaweb.IWApplicationContext;
-import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
 import com.idega.idegaweb.presentation.IWAdminWindow;
 import com.idega.presentation.Block;
@@ -74,18 +73,12 @@ public class QandAEditorWindow extends IWAdminWindow {
 		public final static String PRM_CATEGORY = "qae_cat";
 		
 		private IWResourceBundle iwrb;
-		private IWBundle iwb;
-		private String IW_BUNDLE_IDENTIFIER = "com.idega.block.questions";
-		
 		private Integer qaID = null;
 		private Integer localeID = null;
 		private Integer categoryID = null;
 		
 		private Question qaEntity = null;
 		private LocalizedText question = null,answer = null;
-		
-		private String textStyle = "",interfaceStyle = "";
-		
 		
 		/* (non-Javadoc)
 		 * @see com.idega.presentation.PresentationObject#main(com.idega.presentation.IWContext)
@@ -97,7 +90,6 @@ public class QandAEditorWindow extends IWAdminWindow {
 		}
 		
 		private void init(IWContext iwc){
-			iwb = getBundle(iwc);
 			iwrb = getResourceBundle(iwc);
 			if(iwc.isParameterSet(PRM_CATEGORY)){
 				categoryID = Integer.valueOf(iwc.getParameter(PRM_CATEGORY));
@@ -248,11 +240,9 @@ public class QandAEditorWindow extends IWAdminWindow {
 		}
 		
 		public void setTextStyle(String style){
-			this.textStyle = style;
 		}
 		
 		public void setInterfaceStyle(String style){
-			this.interfaceStyle = style;
 		}
 	}
 
