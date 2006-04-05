@@ -1,5 +1,18 @@
-#Sun Oct 27 14:48:48 GMT 2002
+button_create_answer=B\u00FAa til svar
+button_create_question=B\u00FAa til spurningu
+button_down=F\u00E6ra ni\u00F0ur
+button_edit_answer=Breyta svari
+button_edit_question=Breyta spurningu
+button_invalidate=Fjarl\u00E6gja af lista
+button_remove=Ey\u00F0a af lista
+button_save_created=Vista breytingar
+button_up=F\u00E6ra upp
+button_validate=Vikja val
+deleted_questions=Eyddar spurningar
 help_text=If the blank page icon appears you have to save changes with the save button, else changes are saved in the editor window ( when the open icon appears)
-save=Save
-iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers.name=QuestionsAndAnswers
-help_title=Q & A
+help_title=Spurningar og Sv\u00F6r
+iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers.name=Spurningar og Sv\u00F6r
+iw.component.com.idega.block.questions.presentation.QuestionsAndAnswers2.name=Spurningar og Sv\u00F6r 2
+no_category=Enginn flokkur
+save=Vista
+update=Uppf\u00E6ra
