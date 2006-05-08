@@ -37,8 +37,8 @@ import com.idega.presentation.ui.TextInput;
  */
 public class QandAEditorWindow extends IWAdminWindow {
 	
-	public final static String PRM_QA_ID = QandAEditor.PRM_QA_ID;
-	public final static String PRM_CATEGORY = QandAEditor.PRM_CATEGORY;
+	public final static String PRM_QA_ID = "qa_id";
+	public final static String PRM_CATEGORY = "qae_cat";
 	
 	
 	public QandAEditorWindow(){
@@ -63,14 +63,12 @@ public class QandAEditorWindow extends IWAdminWindow {
 		
 		
 		private final static String PRM_LOCALE_ID="qae_locid";
-		public final static String PRM_QA_ID = "qa_id";
 		private final static String PRM_Q_TITLE = "q_title";
 		private final static String PRM_A_TITLE = "a_title";
 		private final static String PRM_Q_BODY = "q_body";
 		private final static String PRM_A_BODY = "a_body";
 		private final static String PRM_SAVE = "qae_save";
 		private final static String PRM_CLOSE = "qae_close";
-		public final static String PRM_CATEGORY = "qae_cat";
 		
 		private IWResourceBundle iwrb;
 		private Integer qaID = null;
