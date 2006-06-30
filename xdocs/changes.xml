@@ -5,7 +5,7 @@
   </properties>
   <body>
 
-	<release version="3.1.0" date="2006-06-26">
+	<release version="3.1.0" date="2006-06-30">
       <action dev="tryggvil" type="update">
         Built version to be used with ePlatform release 3.1
       </action>              
