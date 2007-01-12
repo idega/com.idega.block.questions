@@ -19,6 +19,7 @@ import com.idega.core.localisation.business.ICLocaleBusiness;
 import com.idega.core.localisation.presentation.ICLocalePresentation;
 import com.idega.data.IDOLookup;
 import com.idega.idegaweb.IWApplicationContext;
+import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
 import com.idega.idegaweb.presentation.IWAdminWindow;
 import com.idega.presentation.Block;
@@ -37,8 +38,8 @@ import com.idega.presentation.ui.TextInput;
  */
 public class QandAEditorWindow extends IWAdminWindow {
 	
-	public final static String PRM_QA_ID = "qa_id";
-	public final static String PRM_CATEGORY = "qae_cat";
+	public final static String PRM_QA_ID = QandAEditor.PRM_QA_ID;
+	public final static String PRM_CATEGORY = QandAEditor.PRM_CATEGORY;
 	
 	
 	public QandAEditorWindow(){
@@ -63,20 +64,28 @@ public class QandAEditorWindow extends IWAdminWindow {
 		
 		
 		private final static String PRM_LOCALE_ID="qae_locid";
+		public final static String PRM_QA_ID = "qa_id";
 		private final static String PRM_Q_TITLE = "q_title";
 		private final static String PRM_A_TITLE = "a_title";
 		private final static String PRM_Q_BODY = "q_body";
 		private final static String PRM_A_BODY = "a_body";
 		private final static String PRM_SAVE = "qae_save";
 		private final static String PRM_CLOSE = "qae_close";
+		public final static String PRM_CATEGORY = "qae_cat";
 		
 		private IWResourceBundle iwrb;
+		private IWBundle iwb;
+		private String IW_BUNDLE_IDENTIFIER = "com.idega.block.questions";
+		
 		private Integer qaID = null;
 		private Integer localeID = null;
 		private Integer categoryID = null;
 		
 		private Question qaEntity = null;
 		private LocalizedText question = null,answer = null;
+		
+		private String textStyle = "",interfaceStyle = "";
+		
 		
 		/* (non-Javadoc)
 		 * @see com.idega.presentation.PresentationObject#main(com.idega.presentation.IWContext)
@@ -88,6 +97,7 @@ public class QandAEditorWindow extends IWAdminWindow {
 		}
 		
 		private void init(IWContext iwc){
+			this.iwb = getBundle(iwc);
 			this.iwrb = getResourceBundle(iwc);
 			if(iwc.isParameterSet(PRM_CATEGORY)){
 				this.categoryID = Integer.valueOf(iwc.getParameter(PRM_CATEGORY));
@@ -243,9 +253,11 @@ public class QandAEditorWindow extends IWAdminWindow {
 		}
 		
 		public void setTextStyle(String style){
+			this.textStyle = style;
 		}
 		
 		public void setInterfaceStyle(String style){
+			this.interfaceStyle = style;
 		}
 	}
 

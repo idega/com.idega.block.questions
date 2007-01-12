@@ -16,7 +16,6 @@ import com.idega.block.questions.data.Question;
 import com.idega.block.text.business.ContentHelper;
 import com.idega.block.text.business.TextFinder;
 import com.idega.business.IBOLookup;
-import com.idega.core.builder.data.ICPage;
 import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
 import com.idega.presentation.IWContext;
@@ -83,31 +82,19 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	public final static String DEFAULT_A_TITLE = "font-style:normal;color:#000000;font-size:11px;font-family:Verdana,Arial,Helvetica,sans-serif;font-weight:bold;";
 	public final static String DEFAULT_A_BODY = "font-weight:plain;";
 	public final static String DEFAULT_Q_PREFIX = "font-style:normal;color:#000000;font-size:13px;font-family:Verdana,Arial,Helvetica,sans-serif;font-weight:bold;";
-	public final static String DEFAULT_A_PREFIX = "font-style:normal;color:#000000;font-size:13px;font-family:Verdana,Arial,Helvetica,sans-serif;font-weight:bold;";
+	public final static String DEFAULT_A_PREFIX = "font-style:normal;color:#000000;font-size:13px;font-family:Verdana,Arial,Helvetica,sans-serif;font-weight:bold;";;
 	public final static String DEFAULT_C_TITLE = "font-style:normal;color:#000000;font-size:11px;font-family:Verdana,Arial,Helvetica,sans-serif;font-weight:bold;";
 	public final static String DEFAULT_Q_COUNT = "font-weight:plain;";
 	
 	private int layout = QAndALayoutHandler.DEFAULT_LAYOUT;
 	
-	public final static String CACHE_KEY = "qa_questions_and_answers2";
 	
 	private final static String DEFAULT_MAIN_STYLE_CLASS = "questions_and_answers";
 	private String mainStyleClass = DEFAULT_MAIN_STYLE_CLASS;
 	
-	private ICPage iViewerPage;
-	private boolean hideFromOthers = false;
 	
 	public QuestionsAndAnswers2(){
-		setCacheable(getCacheKey(), (20 * 60 * 1000));
 		setAutoCreate(false);
-	}
-	
-	public String getCacheKey() {
-		return CACHE_KEY;
-	}
-
-	protected boolean isCacheable(IWContext iwc) {
-		return !iwc.hasEditPermission(this);
 	}
 	
 	public String getBundleIdentifier(){
@@ -155,10 +142,8 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 			
             if (this.isAdmin) {
                 mainLayer.getChildren().add(getCategoryAdminPart(iwc));	 //admin part to manage categories
-            }
-            if (!this.hideFromOthers || (this.hideFromOthers && this.isAdmin)) {
-	            mainLayer.getChildren().add(getQuestionsAdminPart(iwc)); //admin part for questions            
-            }
+            }            
+            mainLayer.getChildren().add(getQuestionsAdminPart(iwc)); //admin part for questions            
             if (this.showAll && (this.showAllCategories || (!this.showAllCategories && this.valViewCategory != null))) {
                 mainLayer.getChildren().add(getQuestionsListPart(iwc));  //list of questions and their answers
             }
@@ -201,8 +186,8 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
                 if (helper.getLocalizedText() != null) {
                     String headline = helper.getLocalizedText().getHeadline();
                     if (headline.length() > 20) {
-											headline = headline.substring(0, 20) + "...";
-										}
+						headline = headline.substring(0, 20) + "...";
+					}
                     drop.addMenuElement(quest.getPrimaryKey().toString(),
                             headline);
                 }
@@ -578,10 +563,6 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
         titleP.setStyleClass("title"); 
         if (this.showAll) {
             AnchorLink l = new AnchorLink(new Text(qHeadline), "q" + question.getPrimaryKey());
-            if (this.iViewerPage != null) {
-            	l.setPage(this.iViewerPage);
-            	l.addCurrentURLToLink(true);
-            }
             titleP.getChildren().add(l);
         } else {
             titleP.getChildren().add(new Text(qHeadline));
@@ -934,15 +915,5 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 
         return item;
     }
-
-		
-		public void setViewerPage(ICPage viewerPage) {
-			this.iViewerPage = viewerPage;
-		}
-
-		
-		public void setHideFromOthers(boolean hideFromOthers) {
-			this.hideFromOthers = hideFromOthers;
-		}
     
 }
