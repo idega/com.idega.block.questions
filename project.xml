@@ -5,7 +5,7 @@
   <pomVersion>3</pomVersion>
   <name>idegaWeb Questions Block</name>
   <artifactId>com.idega.block.questions</artifactId>
-  <currentVersion>3.1.0</currentVersion>
+  <currentVersion>3.1.1</currentVersion>
   <shortDescription>Questions</shortDescription>
   <versions>
     <version>
@@ -52,31 +52,28 @@
     <dependency>
       <groupId>bundles</groupId>
       <artifactId>com.idega.core</artifactId>
-      <version>3.1.0</version>
+      <version>3.1.40</version>
       <type>jar</type>
       <url>http://www.idega.com/</url>
-      <properties>
-        <eclipse.dependency>${idegaweb.project.source.dependent}</eclipse.dependency>
-      </properties>
     </dependency>
     <dependency>
       <groupId>bundles</groupId>
       <artifactId>com.idega.block.category</artifactId>
-      <version>3.1.0</version>
+      <version>3.1.1</version>
       <type>jar</type>
       <url>http://www.idega.com/</url>
       <properties>
-        <eclipse.dependency>${idegaweb.project.source.dependent}</eclipse.dependency>
+        <eclipse.dependency>true</eclipse.dependency>
       </properties>
     </dependency>
     <dependency>
       <groupId>bundles</groupId>
       <artifactId>com.idega.block.text</artifactId>
-      <version>3.1.0</version>
+      <version>3.1.1</version>
       <type>jar</type>
       <url>http://www.idega.com/</url>
       <properties>
-        <eclipse.dependency>${idegaweb.project.source.dependent}</eclipse.dependency>
+        <eclipse.dependency>true</eclipse.dependency>
       </properties>
     </dependency>
   </dependencies>
