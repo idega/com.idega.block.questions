@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Id: pom.xml,v 1.1 2006/12/12 20:32:41 civilis Exp $ -->
+<!-- $Id: pom.xml,v 1.2 2007/04/18 08:07:15 civilis Exp $ -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -8,14 +8,18 @@
   <groupId>com.idega.block.addon</groupId>
   <artifactId>com.idega.block.questions</artifactId>
   <packaging>jar</packaging>
-  <version>3.5.0</version>
+  <version>4.0-SNAPSHOT</version>
   <inceptionYear>2005</inceptionYear>
   <description>Questions</description>
   <parent>
     <groupId>com.idega.block.platform</groupId>
     <artifactId>com.idega.block.base</artifactId>
-    <version>3.5.0</version>
+    <version>4.0-SNAPSHOT</version>
   </parent>
+  <scm>
+    <connection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</connection>
+    <developerConnection>scm:cvs:ext:${user.name}@code.idega.com:/idega/cvs:${groupId}/${artifactId}/</developerConnection>
+  </scm>
   <developers>
     <developer>
       <name>Tryggvi Larusson</name>
@@ -43,19 +47,19 @@
     <dependency>
       <groupId>com.idega.block.platform</groupId>
       <artifactId>com.idega.core</artifactId>
-      <version>3.5.0</version>
+      <version>4.0-SNAPSHOT</version>
       <type>jar</type>
      </dependency>
     <dependency>
       <groupId>com.idega.block.legacy</groupId>
       <artifactId>com.idega.block.category</artifactId>
-      <version>3.5.0</version>
+      <version>4.0-SNAPSHOT</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>com.idega.block.legacy</groupId>
       <artifactId>com.idega.block.text</artifactId>
-      <version>3.5.0</version>
+      <version>4.0-SNAPSHOT</version>
       <type>jar</type>
     </dependency>
   </dependencies>
