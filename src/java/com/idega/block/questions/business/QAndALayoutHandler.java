@@ -1,5 +1,5 @@
 /*
- * $Id: QAndALayoutHandler.java,v 1.1 2004/08/09 17:20:35 aron Exp $
+ * $Id: QAndALayoutHandler.java,v 1.2 2007/08/14 12:33:08 alexis Exp $
  *
  * Copyright (C) 2001 Idega hf. All Rights Reserved.
  *
@@ -41,7 +41,7 @@ public class QAndALayoutHandler implements ICPropertyHandler {
   /**
    *
    */
-  public PresentationObject getHandlerObject(String name, String value, IWContext iwc) {
+  public PresentationObject getHandlerObject(String name, String value, IWContext iwc, boolean oldGenerationHandler, String instanceId, String method) {
     DropdownMenu menu = new DropdownMenu(name);
     menu.addMenuElement("","Select:");
     menu.addMenuElement(DEFAULT_LAYOUT ,"DEFAULT");
