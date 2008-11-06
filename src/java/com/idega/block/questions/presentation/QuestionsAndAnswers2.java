@@ -34,6 +34,7 @@ import com.idega.presentation.ui.Form;
 import com.idega.presentation.ui.HelpButton;
 import com.idega.presentation.ui.HiddenInput;
 import com.idega.presentation.ui.SubmitButton;
+import com.idega.util.PresentationUtil;
 
 /**
  * 
@@ -102,14 +103,17 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 		setAutoCreate(false);
 	}
 	
+	@Override
 	public String getCacheKey() {
 		return CACHE_KEY;
 	}
 
+	@Override
 	protected boolean isCacheable(IWContext iwc) {
 		return !iwc.hasEditPermission(this);
 	}
 	
+	@Override
 	public String getBundleIdentifier(){
 		return this.IW_BUNDLE_IDENTIFIER;
 	}
@@ -117,6 +121,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	/**
 	 * @see com.idega.block.category.presentation.CategoryBlock#getCategoryType()
 	 */
+	@Override
 	public String getCategoryType() {
 		return "QA2";
 	}
@@ -124,16 +129,19 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	/**
 	 * @see com.idega.block.category.presentation.CategoryBlock#getMultible()
 	 */
+	@Override
 	public boolean getMultible() {
 		return true;
 	}
 	
+	@Override
 	public void main(IWContext iwc)throws RemoteException{
 		//debugParameters(iwc);
 		this.iwb = getBundle(iwc);
 		this.iwrb = getResourceBundle(iwc);
 		this.core = iwc.getIWMainApplication().getCoreBundle();
 		this.isAdmin = iwc.hasEditPermission(this);
+		PresentationUtil.addStyleSheetToHeader(iwc, iwb.getVirtualPathWithFileNameString("style/questions_and_answers.css"));
 		
 		this.questionsService = (QuestionsService)IBOLookup.getServiceInstance(iwc,QuestionsService.class);
 		this.currentLocale = iwc.getCurrentLocale();		
@@ -262,6 +270,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 	}
 	
 	
+	@Override
 	public Map getStyleNames() {
 		HashMap map = new HashMap();
 		String[] styleNames = { 
@@ -355,6 +364,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
 		this.answerPrefixImage= answerPrefixImage;
 	}
 	
+	@Override
 	public synchronized Object clone() {
         QuestionsAndAnswers2 obj = null;
         try {
