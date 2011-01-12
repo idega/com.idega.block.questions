@@ -629,7 +629,7 @@ public class QuestionsAndAnswers2 extends CategoryBlock {
         
         //edit link
         Link editLink = new Link();
-        editLink.setStyleClass("edit");
+        editLink.setStyleClass("editItem");
         editLink.setWindowToOpen(QandAEditorWindow.class);
         editLink.addParameter(QandAEditorWindow.PRM_CATEGORY, categoryId.toString());   
         editLink.setImage(this.iwb.getImage("open.gif", this.iwrb.getLocalizedString("button_edit_question", "Edit question")));
