@@ -7,7 +7,9 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.ejb.FinderException;
+
 import com.idega.block.category.data.ICCategory;
 import com.idega.block.category.presentation.CategoryBlock;
 import com.idega.block.questions.business.QAndALayoutHandler;

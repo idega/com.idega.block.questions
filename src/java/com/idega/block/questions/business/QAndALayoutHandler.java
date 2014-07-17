@@ -42,12 +42,7 @@ public class QAndALayoutHandler implements ICPropertyHandler {
    *
    */
   public PresentationObject getHandlerObject(String name, String value, IWContext iwc, boolean oldGenerationHandler, String instanceId, String method) {
-    DropdownMenu menu = new DropdownMenu(name);
-    menu.addMenuElement("","Select:");
-    menu.addMenuElement(DEFAULT_LAYOUT ,"DEFAULT");
-    menu.addMenuElement(SINGLE_RANDOM_LAYOUT,"SINGLE RANDOM Q & A");
-    menu.setSelectedElement(value);
-    return(menu);
+    return getHandlerObject(name, value, iwc);
   }
 
   /**
@@ -55,4 +50,14 @@ public class QAndALayoutHandler implements ICPropertyHandler {
    */
   public void onUpdate(String values[], IWContext iwc) {
   }
+
+	public PresentationObject getHandlerObject(String name, String stringValue,
+			IWContext arg2) {
+		DropdownMenu menu = new DropdownMenu(name);
+	    menu.addMenuElement("","Select:");
+	    menu.addMenuElement(DEFAULT_LAYOUT ,"DEFAULT");
+	    menu.addMenuElement(SINGLE_RANDOM_LAYOUT,"SINGLE RANDOM Q & A");
+	    menu.setSelectedElement(stringValue);
+	    return(menu);
+	}
 }
